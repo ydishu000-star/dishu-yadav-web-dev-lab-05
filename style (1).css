@@ -1,0 +1,161 @@
+/* style.css — Responsive Online Learning landing page
+   - Uses CSS variables, Flexbox & Grid
+   - Breakpoints: mobile <= 600px, tablet <= 1024px, desktop >= 1024px
+*/
+
+:root{
+  --bg: #0f1724;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #6C5CE7;
+  --accent-2: #00b894;
+  --glass: rgba(255,255,255,0.06);
+  --gap: 1.25rem;
+  --radius: 12px;
+  --max-width: 1100px;
+  --ff: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-size: 16px; /* base */
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--ff);
+
+  /* UPDATED BACKGROUND (LIGHT BLUE) */
+  background:linear-gradient(180deg,#d6ecff 0%, #e9f5ff 100%);
+
+  color:#0b1220;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+.container{
+  width:90%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:2rem 0;
+}
+
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{left:1rem;top:1rem;background:#fff;padding:.5rem 1rem;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+
+/* Header */
+.site-header{background:transparent;position:sticky;top:0;z-index:40;padding:1rem 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem}
+.brand .logo{background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:6px;border-radius:8px}
+.brand-name{font-weight:700;color:#0b1220;text-decoration:none;font-size:1.1rem}
+
+.primary-nav ul{display:flex;gap:1rem;margin:0;padding:0;list-style:none}
+.primary-nav a{color:var(--muted);text-decoration:none;font-weight:600}
+.primary-nav a:hover{color:var(--accent)}
+
+.cta-actions{display:flex;gap:.6rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:700;transition:all .22s ease}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(108,92,231,0.12)}
+.btn-outline{background:transparent;border:2px solid rgba(11,18,32,0.06);color:var(--muted)}
+.btn-ghost{background:transparent;color:var(--muted);border:0}
+.btn-sm{padding:.45rem .8rem;border-radius:8px}
+
+/* Hero */
+.hero{padding:4rem 0 2rem}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+.hero-copy h1{font-size:2.1rem;margin:0 0 .6rem}
+.hero-copy p{color:var(--muted);margin:0 0 1rem}
+.hero-ctas{display:flex;gap:1rem}
+.feature-svg{width:100%;height:auto;border-radius:12px;box-shadow:0 20px 40px rgba(12,20,40,0.06);animation:heroFloat 6s ease-in-out infinite}
+
+@keyframes heroFloat{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+  100%{transform:translateY(0)}
+}
+
+/* Sections */
+.section{padding:3rem 0}
+.section.alt{background:linear-gradient(180deg,#ffffff, #f7f9fc)}
+.section-header h2{margin:0 0 .25rem;font-size:1.6rem}
+.section-header p{color:var(--muted);margin:0 0 1rem}
+
+/* Filters */
+.filters{margin:1rem 0 1.5rem}
+.filters form{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.filter{display:flex;flex-direction:column;font-size:.9rem}
+.filter select{padding:.5rem;border-radius:8px;border:1px solid rgba(11,18,32,0.06)}
+
+/* Course grid */
+.course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;list-style:none;padding:0;margin:0}
+.course-card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(12,20,40,0.06);display:flex;flex-direction:column}
+.course-card img{width:100%;height:160px;object-fit:cover;display:block}
+.card-body{padding:1rem;display:flex;flex-direction:column;gap:.6rem}
+.card-body h3{margin:0;font-size:1.05rem}
+.meta{color:var(--muted);font-size:.85rem}
+.excerpt{color:#222;margin:0}
+.card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+.price{font-weight:700}
+
+/* Testimonials */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.testimonial{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(12,20,40,0.04)}
+.testimonial p{margin:0 0 .6rem}
+.testimonial cite{color:var(--muted);font-size:.9rem}
+
+/* Pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.plan{background:var(--card);padding:1.25rem;border-radius:12px;display:flex;flex-direction:column;gap:.8rem}
+.plan.highlight{border:2px solid var(--accent);transform:translateY(-6px)}
+.price-big{font-size:1.4rem;margin:0}
+.plan ul{padding-left:1.1rem}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:start}
+.contact-form{display:flex;flex-direction:column;gap:.6rem}
+.contact-form input,.contact-form textarea{padding:.7rem;border-radius:8px;border:1px solid rgba(11,18,32,0.06);font-size:1rem}
+.contact-form textarea{min-height:140px}
+.form-actions{display:flex;gap:1rem}
+.contact-info{background:var(--card);padding:1rem;border-radius:12px}
+.socials{display:flex;gap:.6rem;margin-top:.5rem}
+.social-svg{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:var(--glass)}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(11,18,32,0.04);padding:1rem 0;background:transparent}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.footer-inner ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.footer-inner a{color:var(--muted);text-decoration:none}
+
+/* Responsive rules */
+@media (max-width:1024px){
+  .hero-inner{grid-template-columns:1fr 320px}
+  .course-grid{grid-template-columns:repeat(3,1fr)}
+  .testimonials-grid{grid-template-columns:repeat(2,1fr)}
+  .pricing-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width:768px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .primary-nav ul{flex-wrap:wrap}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-image{order:2}
+  .course-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonials-grid{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:600px){
+  :root{font-size:15px}
+  .container{width:94%}
+  .course-grid{grid-template-columns:1fr}
+  .primary-nav ul{display:none}
+  .cta-actions{display:flex;gap:.5rem}
+  .hero-copy h1{font-size:1.6rem}
+}
+
+/* Small utility */
+.text-center{text-align:center}
