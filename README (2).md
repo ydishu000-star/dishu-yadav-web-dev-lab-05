@@ -1,6 +1,6 @@
-Akshit  
+Dishu yadav
 
-Roll No: 2501730020
+Roll No: 2501730126
 
 Course: B.Tech CSE (AI & ML)
 
@@ -29,6 +29,7 @@ Online Learning Platform — a single-page static landing site showcasing course
 - Desktop: `>= 1024px` — multi-column grids, full layout.
 - Tablet: `~768px - 1024px` — reduced columns (3 → 2), stacked header.
 - Mobile: `<= 600px` — single-column layout, collapsed nav (simple hide for this static demo).
+
 
 
 
