@@ -1,0 +1,303 @@
+ Online Learning Platform 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learnify — Online Learning Platform</title>
+  <meta name="description" content="Learnify — modern responsive landing page showcasing courses, testimonials, pricing and contact form.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg class="logo" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="M3 8h18" stroke="#fff" stroke-width="0.8" fill="none"></path>
+        </svg>
+        <a href="#" class="brand-name">Learnify</a>
+      </div>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta-actions">
+        <a class="btn btn-outline" href="#pricing">Pricing</a>
+        <a class="btn btn-primary" href="#contact">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Upskill faster with guided courses</h1>
+          <p>Short, practical video courses built by industry experts. Learn at your pace and build real projects.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#courses">Browse Courses</a>
+            <a class="btn btn-ghost" href="#about">Learn More</a>
+          </div>
+        </div>
+        
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0%" stop-color="#6C5CE7" stop-opacity="1" />
+                <stop offset="100%" stop-color="#00b894" stop-opacity="1" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses grid -->
+    <section id="courses" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Popular Courses</h2>
+          <p>Practical, project-based courses — start one today.</p>
+        </header>
+
+        <div class="filters">
+          <form aria-label="Course filters">
+            <label class="filter">
+              <span>Category</span>
+              <select>
+                <option>All</option>
+                <option>AI & ML</option>
+                <option>Web Development</option>
+                <option>Data Science</option>
+              </select>
+            </label>
+
+            <label class="filter">
+              <span>Level</span>
+              <select>
+                <option>All</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+              </select>
+            </label>
+
+            <button class="btn btn-outline" type="button" aria-label="Apply filters">Apply</button>
+          </form>
+        </div>
+
+        <ul class="course-grid" aria-live="polite">
+          <!-- Each course is an article -->
+          <li class="course-card">
+            <article>
+              <img src="images/course-1.jpg" alt="Course: Intro to Python" loading="lazy">
+              <div class="card-body">
+                <h3>Intro to Python</h3>
+                <p class="meta">Beginner • 10 lessons</p>
+                <p class="excerpt">Learn Python fundamentals and apply them to small projects.</p>
+                <div class="card-footer">
+                  <span class="price">Free</span>
+                  <a class="btn btn-sm" href="#">Enroll</a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="course-card">
+            <article>
+              <img src="images/course-2.jpg" alt="Course: Machine Learning Basics" loading="lazy">
+              <div class="card-body">
+                <h3>Machine Learning Basics</h3>
+                <p class="meta">Intermediate • 12 lessons</p>
+                <p class="excerpt">Understand supervised learning, regression, and classification.</p>
+                <div class="card-footer">
+                  <span class="price">₹999</span>
+                  <a class="btn btn-sm" href="#">Enroll</a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="course-card">
+            <article>
+              <img src="images/course-3.jpg" alt="Course: Modern Web Development" loading="lazy">
+              <div class="card-body">
+                <h3>Modern Web Development</h3>
+                <p class="meta">Beginner • 14 lessons</p>
+                <p class="excerpt">HTML, CSS, and JavaScript — build responsive websites like this one.</p>
+                <div class="card-footer">
+                  <span class="price">₹699</span>
+                  <a class="btn btn-sm" href="#">Enroll</a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="course-card">
+            <article>
+              <img src="images/course-4.jpg" alt="Course: Data Visualisation" loading="lazy">
+              <div class="card-body">
+                <h3>Data Visualization</h3>
+                <p class="meta">Intermediate • 8 lessons</p>
+                <p class="excerpt">Create effective charts and dashboards that communicate insights.</p>
+                <div class="card-footer">
+                  <span class="price">₹499</span>
+                  <a class="btn btn-sm" href="#">Enroll</a>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>What learners say</h2>
+          <p>Real feedback from our students.</p>
+        </header>
+
+        <div class="testimonials-grid">
+          <blockquote class="testimonial">
+            <p>Great structure and clear projects. I built a portfolio in 2 weeks.</p>
+            <cite>- Priya, Data Analyst</cite>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>Excellent instructors and helpful community. Highly recommended.</p>
+            <cite>- Rohit, Web Developer</cite>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>Practical, short lessons — perfect while studying.</p>
+            <cite>- Sameer, Student</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Pricing Plans</h2>
+          <p>Choose a plan that fits your goals.</p>
+        </header>
+
+        <div class="pricing-grid">
+          <article class="plan">
+            <h3>Free</h3>
+            <p class="price-big">₹0 <span>/mo</span></p>
+            <ul>
+              <li>Access to free courses</li>
+              <li>Community support</li>
+              <li>Limited projects</li>
+            </ul>
+            <a class="btn btn-outline" href="#">Get Free</a>
+          </article>
+
+          <article class="plan highlight">
+            <h3>Pro</h3>
+            <p class="price-big">₹499 <span>/mo</span></p>
+            <ul>
+              <li>All courses</li>
+              <li>Certificate of completion</li>
+              <li>1:1 mentor session</li>
+            </ul>
+            <a class="btn btn-primary" href="#">Start Pro</a>
+          </article>
+
+          <article class="plan">
+            <h3>Team</h3>
+            <p class="price-big">Contact</p>
+            <ul>
+              <li>Team dashboards</li>
+              <li>Custom onboarding</li>
+              <li>Priority support</li>
+            </ul>
+            <a class="btn btn-outline" href="#">Contact Sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>Contact us</h2>
+          <p>Questions? Send us a message and we'll reply soon.</p>
+        </header>
+
+        <div class="contact-grid">
+          <form class="contact-form" action="#" method="post" novalidate>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your full name">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="How can we help?"></textarea>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <button class="btn btn-outline" type="reset">Reset</button>
+            </div>
+          </form>
+
+          <aside class="contact-info" aria-label="Contact information">
+            <h3>Office</h3>
+            <p>123 Learning Lane<br>New Delhi, India</p>
+            <p>Email: <a href="mailto:hello@learnify.example">hello@learnify.example</a></p>
+
+            <h4>Follow us</h4>
+            <div class="socials">
+              <a aria-label="Twitter" href="#" class="social-svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.9c-.6.3-1.3.5-2 .6.7-.4 1.2-1 1.4-1.7-.7.4-1.6.7-2.5.9-.7-.8-1.6-1.2-2.7-1.2-2 0-3.5 1.8-3 3.6-2.5-.1-4.7-1.4-6.2-3.3-.8 1.4-.1 3.3 1.5 4.2-.5 0-1.1-.2-1.6-.4 0 1.7 1.2 3.2 3 3.6-.5.1-1 .2-1.5.1.4 1.3 1.6 2.2 3 2.2C7.7 18.7 9.5 19 11 19c5-3.5 8.2-8 8.2-13.3v-.6c.8-.6 1.5-1.2 2-2z"/></svg>
+              </a>
+              <a aria-label="Facebook" href="#" class="social-svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12z"/></svg>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Learnify. All rights reserved.</p>
+      <nav aria-label="Footer navigation">
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
+```
+
